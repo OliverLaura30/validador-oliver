@@ -4,27 +4,34 @@
   <meta charset="UTF-8">
   <title>Validador de Billetes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
   <link rel="stylesheet" href="styles.css">
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
-  <h2>Validador de Billetes - Por: Oliver Laura</h2>
+  <div class="card">
 
-  <input type="number" id="serie" placeholder="Número de serie">
+    <h2>Validador de Billetes - Serie B - Sólo Bs. 10, 20 y 50</h2>
 
-  <select id="corte">
-    <option value="Bs10">Bs 10</option>
-    <option value="Bs20">Bs 20</option>
-    <option value="Bs50">Bs 50</option>
-  </select>
+    <label for="serie">Número de serie</label>
+    <input type="number" id="serie" placeholder="Ej. 12345678">
 
-  <button onclick="validar()">Validar</button>
+    <label for="corte">Denominación</label>
+    <div class="select-wrapper">
+      <select id="corte">
+        <option value="Bs10">Bs 10</option>
+        <option value="Bs20">Bs 20</option>
+        <option value="Bs50">Bs 50</option>
+      </select>
+    </div>
 
-  <p id="resultado"></p>
+    <button onclick="validar()">Validar</button>
 
-  <p class="nota">Uso informativo. No reemplaza validación oficial.</p>
+    <p id="resultado"></p>
+
+    <p class="nota">Uso gratuito. Realizado por Oliver Laura S.</p>
+
+  </div>
 
   <script src="app.js"></script>
 </body>
